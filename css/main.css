@@ -1,11 +1,13 @@
 /* Start Variables */
-
+:root {
+    --mainColor: #10cab7;
+}
 /* End Variables */
 
 /* Start Global Rules */
 * {
     -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 body {
     font-family: "Work Sans", sans-serif;
@@ -16,29 +18,42 @@ body {
 /* Small */
 @media (min-width: 768px) {
     .container {
-        width: 750px;
+        width: 750px
     }
 }
 
 /* Medium */
 @media (min-width: 992px) {
     .container {
-        width: 970px;
+        width: 970px
+    }
+    .header-landing {
+        background-position-y: -80px!important;
     }
 }
 
 /* Large */
 @media (min-width: 1200px) {
     .container {
-        width: 1170px;
+        width: 1170px
+    }
+    .header-landing {
+        height: calc(100vh - 56px)!important
+    }
+    .header-landing h4 {
+        font-size: 68px!important
+    }
+    .header-landing p {
+        width: 392px!important;
+        font-size: 20px
     }
 }
 /* End Media Query */
 
 /* Start Header */
 header {
-    height: 92px;
-    padding: 5px;
+    height: 56px;
+    padding: 10px
 }
 
 .container {
@@ -46,38 +61,38 @@ header {
     padding: 0 15px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center
     /* border: 5px solid red; */
 }
 
 header img {
-    margin-left: 5px;
-    width: 80px;
+    margin-left: 20px;
+    width: 80px
 }
 header .links {
-    position: relative;
+    position: relative
 }
 header .links .icons {
     display: flex;
     flex-direction: column;
-    cursor: pointer;
+    cursor: pointer
 }
 header .links .icons span {
-    background-color: #333;
+    background: #333;
     width: 25px;
-    height: 1.5px;
+    height: 1.5px
     /* margin-bottom: 4px; */
 }
 header .links .icons span:not(:last-child) {
-    margin-bottom: 4px;
+    margin-bottom: 4px
 }
 header .links .icons span:nth-child(2) {
     width: 50%;
     align-self: flex-end;
-    transition: width .3s;
+    transition: width .3s
 }
 header .links:hover span:nth-child(2){
-    width: 100%;
+    width: 100%
 }
 header ul {
     list-style: none;
@@ -86,7 +101,7 @@ header ul {
     width: 150px;
     position: absolute;
     display: none;
-    background-color: #eee;
+    background: #eee;
     right: -10px;
     top: 30px;
     box-shadow: -1px 1px 7px 0px #d9d9f5,
@@ -99,34 +114,61 @@ header ul::after {
     position: absolute;
     top: -30px;
     right: 10px;
-    cursor: pointer;
+    cursor: pointer
 }
 header .links:hover ul {
-    display: block;
+    display: block
 }
 
 header ul li  {
-    margin: 10px 0;
+    margin: 10px 0
 }
 
 header ul li:not(:last-child) {
     padding-bottom: 10px;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid #ddd
 }
 
 header ul li i {
     margin-left: 10px;
-    color: #9e9e9e;
+    color: #9e9e9e
 }
 
 header ul li a {
     color: #060b049e;
     margin-left: 5px;
     text-decoration: none;
-    transition: padding .3s;
+    transition: padding .3s
 }
 header ul li a:hover {
     padding-left: 10px;
-    color: #060b04b0;
+    color: #060b04b0
 }
+/* Start Landing Section */
+.header-landing {
+    height: calc(100vh - 136px);
+    background: url(../images/landing.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header-landing div {
+    height: 100%;
+    padding: 0;
+    justify-content: flex-start;
+    flex-direction: column
+}
+
+.header-landing h4 {
+    color: var(--mainColor);
+    font-size: 48px;
+    margin: 80px 0 10px
+}
+.header-landing p {
+    color: #333;
+    width: 314px;
+    text-align: center
+}
+/* End Landing Section */
 /* End Header */
+
