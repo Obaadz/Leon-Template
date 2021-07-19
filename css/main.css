@@ -1,6 +1,7 @@
 /* Start Variables */
 :root {
     --mainColor: #10cab7;
+    --secoundaryColor:#333 ;
 }
 /* End Variables */
 
@@ -20,6 +21,12 @@ body {
     .container {
         width: 750px
     }
+    .features div div {
+        width: calc(100% / 2)!important
+    }
+    .features div div:last-child {
+        margin: 0 auto;
+    }
 }
 
 /* Medium */
@@ -27,6 +34,10 @@ body {
     .container {
         width: 970px
     }
+    .features div div {
+        width: calc(100% / 3)!important
+    }
+
 }
 
 /* Large */
@@ -39,7 +50,7 @@ body {
         background-position-y: -80px!important
     }
     .header-landing h4 {
-        font-size: 68px!important
+        font-size: 64px!important
     }
     .header-landing p {
         width: 392px!important;
@@ -163,10 +174,46 @@ header ul li a:hover {
     margin: 80px 0 10px
 }
 .header-landing p {
-    color: #333;
+    color: var(--secoundaryColor);
     width: 314px;
     text-align: center
 }
-/* End Landing Section */
+/* End Landing Sfection */
 /* End Header */
+
+/* Start Features Section */
+.features {
+    height: 500px;
+    padding: 10px;
+    display: flex;
+    background-color: #eee;
+    justify-content: center
+}
+.features > div {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    align-content: center;
+    flex-wrap: wrap;
+
+}
+.features div div {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center
+}
+.features p {
+    color: var(--secondaryColor);
+    font-size: 12px;
+    margin: 5px;
+}
+.features div i {
+    color: var(--mainColor);
+
+}
+
+
+
+
+/* End Features Section */
 
