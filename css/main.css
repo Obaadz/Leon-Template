@@ -27,9 +27,6 @@ body {
     .container {
         width: 970px
     }
-    .header-landing {
-        background-position-y: -80px!important;
-    }
 }
 
 /* Large */
@@ -38,7 +35,8 @@ body {
         width: 1170px
     }
     .header-landing {
-        height: calc(100vh - 56px)!important
+        height: calc(100vh - 56px)!important;
+        background-position-y: -80px!important
     }
     .header-landing h4 {
         font-size: 68px!important
