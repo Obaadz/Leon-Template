@@ -3,6 +3,7 @@
     --primary-color: #10cab7;
     --secondary-color: #607d8b;
     --section-padding: 50px;
+    --section-color: #f4f4f4;
     --tr-duration: .3s;
     --line-height: 1.6
 }
@@ -133,6 +134,7 @@ header .links:hover ul {
 }
 
 header ul li  {
+    display: flex;
     margin: 10px 0
 }
 
@@ -143,18 +145,25 @@ header ul li:not(:last-child) {
 
 header ul li i {
     margin-left: 10px;
-    color: #9e9e9e
+    color: #9e9e9e;
+    order: -1;
+    transition: margin var(--tr-duration)
 }
 
 header ul li a {
     color: #060b049e;
     margin-left: 5px;
     text-decoration: none;
-    transition: padding .3s
+    transition: padding var(--tr-duration)
 }
 header ul li a:hover {
     padding-left: 10px;
-    color: #060b04b0
+    color: #5b7c4eb0
+}
+
+header ul li a:hover + i {
+    margin-left: 9px;
+    color: #8a8a8a
 }
 /* End Header */
 
@@ -188,7 +197,7 @@ header ul li a:hover {
 
 /* Start Features */
 .features {
-    background-color: #f4f4f4;
+    background-color: var(--section-color);
     padding: var(--section-padding) 0
 }
 
@@ -233,11 +242,11 @@ header ul li a:hover {
 
 .services .text h1 {
     color: #9cabb23d;
-    font-size:5.7em
+    font-size:5em
 }
 .services .text p {
     position: absolute;
-    transform: translate(20%,-30px)
+    transform: translate(10%,-35px)
 }
 
 @media (min-width: 768px) {
@@ -247,7 +256,7 @@ header ul li a:hover {
     }
     .services .text p {
         position: absolute;
-        transform: translate(30%,-30px)
+        transform: translate(35%,-40px)
     }
 }
 .services .container {
@@ -266,7 +275,8 @@ header ul li a:hover {
     margin-bottom: 10px
 }
 .services p {
-    margin-left: 48px
+    margin-left: 48px;
+    line-height: var(--line-height)
 }
 
 .services img {
@@ -286,10 +296,69 @@ header ul li a:hover {
 .services .srv-content::after {
     content: "";
     width: 60px;
-    height: 120%;
+    height: 110%;
     background-color: #2c4755;
     position: absolute;
-    transform: translate(-50%,calc(-10% + 4px));
+    transform: translate(-50%,calc(-5% - 14.73px));
     z-index: -1
 }
 /* End Services Section */
+
+/* Start portfolio Section */
+.portfolio {
+    background-color: var(--section-color);
+    padding: var(--section-padding) 0
+}
+
+.portfolio .text {
+    width: max-content;
+    margin: 0 auto;
+    padding-bottom: var(--section-padding);
+    position: relative
+}
+
+.portfolio .text h1 {
+    color: #9cabb23d;
+    font-size:5em
+}
+.portfolio .text p {
+    position: absolute;
+    transform: translate(15%,-35px)
+}
+
+@media (min-width: 768px) {
+    .portfolio .text h1 {
+        color: #9cabb23d;
+        font-size:7em
+    }
+    .portfolio .text p {
+        position: absolute;
+        transform: translate(35%,-40px)
+    }
+}
+.portfolio .container {
+    display: grid;
+    gap: 30px;
+    grid-template-columns:repeat(auto-fill, minmax(300px,1fr))
+}
+
+.portfolio .container div {
+    background-color: #fff
+}
+
+.portfolio .container img {
+    width: 100%
+}
+
+.portfolio .container div .content {
+    padding: 10px
+}
+
+.portfolio h3 {
+    display: inline-block;
+    margin-bottom: 10px
+}
+.portfolio p {
+    line-height: var(--line-height)
+}
+/* End Portfolio Section */
