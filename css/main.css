@@ -362,3 +362,106 @@ header ul li a:hover + i {
     line-height: var(--line-height)
 }
 /* End Portfolio Section */
+
+/* Start About Section */
+.about {
+    padding: var(--section-padding) 0
+}
+
+.about .text {
+    width: max-content;
+    margin: 0 auto;
+    padding-bottom: var(--section-padding);
+    position: relative
+}
+
+.about .text h1 {
+    color: #9cabb23d;
+    font-size:5em
+}
+.about .text p {
+    position: absolute;
+    transform: translate(40%,-35px)
+}
+
+@media (min-width: 768px) {
+    .about .text h1 {
+        color: #9cabb23d;
+        font-size:7em
+    }
+    .about .text p {
+        font-size:1.3em;
+        position: absolute;
+        transform: translate(50%,-40px)
+    }
+}
+
+.about .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 20px
+}
+
+.about .container .content {
+    width: 250px;
+    height: 375px;
+    padding-bottom: 10px;
+    justify-self: center;
+    position: relative;
+}
+.about .container .content:before {
+    background-color: #eee;
+    width: 20%;
+    height: 110%;
+    position: absolute;
+    transform: translate(-50%,-18.75px);
+    z-index: -1;
+}
+.about .container .content:after {
+    top: -18.75px;
+    position: absolute;
+    width: 80px;
+    height: 260px;
+    border-left: 80px solid var(--primary-color);
+    border-bottom: 80px solid var(--primary-color);
+    z-index: -1;
+    right: -120px;
+}
+@media (min-width: 992px) {
+    .about .container .content:before {
+    content: "";
+    }
+    .about .container .content:after {
+        content: "";
+        }
+}
+
+.about .container .content img {
+    max-width: 100%;
+}
+
+.about .container .txt {
+    padding: 10px;
+}
+
+.about .txt h3 {
+    color: #1f262ade;
+    margin-bottom: 50px;
+    position: relative;
+}
+.about .txt h3:after {
+    content: "";
+    background-color: var(--primary-color);
+    width: 60%;
+    height: 2px;
+    position: absolute;
+    bottom: -30px;
+    left: 0
+
+}
+
+.about p,
+.about h3 {
+    line-height: var(--line-height)
+}
+/* End About Section */
