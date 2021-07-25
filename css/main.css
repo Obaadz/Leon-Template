@@ -465,3 +465,39 @@ header ul li a:hover + i {
     line-height: var(--line-height)
 }
 /* End About Section */
+
+/* Start Contact Section */
+.contact {
+    background-color: var(--section-color);
+    padding: var(--section-padding) 0
+}
+
+.contact .text {
+    width: max-content;
+    margin: 0 auto;
+    padding-bottom: var(--section-padding);
+    position: relative
+}
+
+.contact .text h1 {
+    color: #9cabb23d;
+    font-size:7em;
+    line-height: .5;
+}
+.contact .text p {
+    position: absolute;
+    transform: translate(46%, -7px);
+    font-size: 1.3em;
+}
+
+@media (min-width: 768px) {
+    .contact .text h1 {
+        color: #9cabb23d;
+        font-size:9em;
+    }
+    .contact .text p {
+        font-size:1.6em;
+        position: absolute;
+        transform: translate(46%, -7px);
+    }
+}
