@@ -475,6 +475,7 @@ header ul li a:hover + i {
 .contact .text {
     width: max-content;
     margin: 0 auto;
+    margin-bottom: 50px;
     padding-bottom: var(--section-padding);
     position: relative
 }
@@ -501,3 +502,40 @@ header ul li a:hover + i {
         transform: translate(46%, -7px);
     }
 }
+
+.contact .container {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.contact .container h4 {
+    width: 100%;
+    margin: 0;
+    font-size: 2em;
+    font-weight: 800;
+}
+
+.contact .container h4:first-child {
+    color: #394449;
+}
+
+.contact .container h4 + h4 {
+    color: var(--primary-color)
+}
+
+.contact .container .social {
+    width: 100%;
+    display: inline-block
+}
+/* .contact .container .social .p */
+.contact .container p {
+    margin-right: 20px;
+}
+.contact i {
+    color: var(--secondary-color);
+}
+.contact i + i {
+    margin-left: 5px;
+}
+/* End Contact Section */
