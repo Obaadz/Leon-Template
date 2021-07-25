@@ -403,11 +403,17 @@ header ul li a:hover + i {
 }
 
 .about .container .content {
+    display: none;
     width: 250px;
     height: 375px;
     padding-bottom: 10px;
     justify-self: center;
     position: relative;
+}
+@media (min-width: 992px) {
+    .about .container .content {
+        display: block;
+    }
 }
 .about .container .content:before {
     background-color: #eee;
@@ -482,13 +488,13 @@ header ul li a:hover + i {
 
 .contact .text h1 {
     color: #9cabb23d;
-    font-size:7em;
+    font-size:4.5em;
     line-height: .5;
 }
 .contact .text p {
     position: absolute;
-    transform: translate(46%, -7px);
-    font-size: 1.3em;
+    transform: translate(33%, -7px);
+    font-size: 1.075em;
 }
 
 @media (min-width: 768px) {
@@ -512,15 +518,17 @@ header ul li a:hover + i {
 .contact .container h4 {
     width: 100%;
     margin: 0;
-    font-size: 2em;
+    font-size: 1.3em;
     font-weight: 800;
 }
 
 .contact .container h4:first-child {
+    margin-bottom: 20px;
     color: #394449;
 }
 
 .contact .container h4 + h4 {
+    margin-bottom: 20px;
     color: var(--primary-color)
 }
 
@@ -539,3 +547,18 @@ header ul li a:hover + i {
     margin-left: 5px;
 }
 /* End Contact Section */
+
+/* Start Footer */
+footer {
+    background-color: #294754;
+    padding: 30px;
+}
+footer p {
+    color: white;
+    font-weight: 800;
+    text-align: center;
+}
+footer span {
+    color: var(--primary-color)
+}
+/* End Footer */
