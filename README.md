@@ -1,5 +1,5 @@
 # Leon Template
-html &amp; css template
+html &amp; css template - responsive design.
 Template : 1
 
 
